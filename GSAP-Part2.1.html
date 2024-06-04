@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .pg {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+
+            & .box {
+                height: 150px;
+                width: 150px;
+                background-color: black;
+            }
+        }
+
+        #page1 {
+            background-color: crimson;
+        }
+
+        #page2 {
+            background-color: aquamarine;
+        }
+
+        #page3 {
+            background-color: limegreen;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: relative;">
+        <div id="page1" class="pg">
+            <div class="box">
+            </div>
+        </div>
+        <div id="page2" class="pg">
+            <div class="box">
+            </div>
+        </div>
+        <div id="page3" class="pg">
+            <div class="box">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script>
+        gsap.from("#page1 .box", {
+            scale: 2,
+            borderRadius: 80,
+            scrollTrigger: {
+                trigger: "#page1",
+                scroller: "body",
+                start: "top 0%",
+                end: "top -100%",
+                scrub: 1,
+                pin: true,
+            }
+        })
+        gsap.from("#page2 .box", {
+            opacity: 0,
+            x: 200,
+            borderRadius: 80,
+            scrollTrigger: {
+                trigger: "#page2 .box",
+                scroller: "body",
+                start: "top 80%",
+                end: "bottom 60%",
+                scrub: 1,
+            }
+        })
+        gsap.from("#page3 .box", {
+            opacity: 0,
+            x: -200,
+            rotate: 90,
+            borderRadius: 80,
+            scrollTrigger: {
+                trigger: "#page3 .box",
+                scroller: "body",
+                start: "top 80%",
+                end: "bottom 65%",
+                scrub: 1,
+            }
+        })
+    </script>
+</body>
+
+</html>
