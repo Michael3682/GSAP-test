@@ -20,6 +20,18 @@
             width: 100%;
         }
 
+        body {
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #8ac640;
+        }
+
         section {
             height: 100%;
             width: 100%;
@@ -29,10 +41,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 35px 50px;
+                padding: 20px 50px;
 
                 & h1 {
-                    font-size: 40px;
+                    font-size: 35px;
                 }
 
                 & .part2 {
@@ -51,14 +63,14 @@
                         font-size: 20px;
                         border-radius: 15px;
                         border: 1px solid black;
-                        background-color: rgb(138, 198, 64);
+                        background-color: #8ac640;
                     }
                 }
             }
 
             & .center {
-                padding: 50px;
-                height: 85%;
+                padding: 30px 80px;
+                height: 70%;
                 width: 100%;
                 display: flex;
 
@@ -67,14 +79,14 @@
                     width: 40%;
 
                     & h1 {
-                        font-size: 70px;
+                        font-size: 50px;
                     }
 
                     & p {
                         font-size: 20px;
                         width: 95%;
-                        margin-top: 40px;
-                        margin-bottom: 30px;
+                        margin-top: 30px;
+                        margin-bottom: 20px;
                     }
 
                     & button {
@@ -92,11 +104,121 @@
                     height: 100%;
                     width: 60%;
                     display: flex;
+                    overflow: hidden;
                     justify-content: center;
 
                     & img {
                         height: 100%;
                         object-fit: cover;
+                    }
+                }
+            }
+
+            & .section1bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 30px 80px;
+
+                & img {
+                    height: 40px;
+                }
+            }
+        }
+
+        .section2 {
+            & .services {
+                padding: 40px 80px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 50px;
+                margin-top: 30px;
+
+                & h3 {
+                    font-size: 50px;
+                    font-weight: 500;
+                    padding: 5px 10px 3px 10px;
+                    border-radius: 5px;
+                    background-color: #8ac640;
+                }
+            }
+
+            & .container {
+                height: 80%;
+                width: 100%;
+                padding: 40px 80px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 60px;
+
+                & .elem {
+                    flex-shrink: 0;
+                    height: 350px;
+                    width: 45%;
+                    border: 3px solid black;
+                    border-radius: 50px;
+                    padding: 45px;
+                    display: flex;
+
+
+                    & .elem-part1 {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        flex-direction: column;
+
+                        & h2 {
+                            font-size: 30px;
+                            width: 100%;
+                            padding: 5px;
+                            border-radius: 10px;
+                            font-weight: 900;
+                            background-color: #8ac640;
+                        }
+
+                        & h4 {
+                            display: flex;
+                            align-items: center;
+                            font-size: 25px;
+                            font-weight: 500;
+                            gap: 15px;
+
+                            & i {
+                                border-radius: 50%;
+                                background-color: black;
+                                color: white;
+                                font-weight: 500;
+                                padding: 10px;
+                            }
+                        }
+                    }
+
+                    & .elem-part2 {
+                        height: 100%;
+                        width: 50%;
+
+                        & img {
+                            height: 100%;
+                        }
+                    }
+                }
+
+                & .black {
+                    background-color: black;
+                    color: white;
+
+                    & .elem-part1 h2 {
+                        background-color: white;
+                        color: black;
+                    }
+
+                    & .elem-part1 h4 i {
+                        background-color: white;
+                        color: black;
                     }
                 }
             }
@@ -129,7 +251,65 @@
                 <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="">
             </div>
         </div>
+        <div class="section1bottom">
+            <img src="https://freelogopng.com/images/all_img/1688364239amazon-logo-black.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Dribbble_Text_Logo_Script.svg/2560px-Dribbble_Text_Logo_Script.svg.png"
+                alt="">
+            <img src="https://assets-global.website-files.com/5c0ace01121734292359397b/63922cc0014939bb11a14d92_Logo%20(69).png"
+                alt="">
+            <img src="https://i0.wp.com/get.site/wp-content/uploads/2021/10/notion-logo.png?ssl=1" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYNC7NypT169LYktMtrQfFDLM5-1Ce-7Y53g&s"
+                alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpMqvr9VLfcmwxvMfxU8bkODl0iMYdBKEA2A&s"
+                alt="">
+        </div>
     </section>
+    <div class="section2">
+        <div class="services">
+            <h3>Services</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque vel aliquam iste optio corporis delectus
+                eveniet tempora ut quasi. Assumenda velit sunt maiores nesciunt cupiditate sint, cum aliquid distinctio!
+                Dolor.</p>
+        </div>
+        <div class="container">
+            <div class="elem line1 left">
+                <div class="elem-part1">
+                    <h2>Search engine optimization</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn More</h4>
+                </div>
+                <div class="elem-part2">
+                    <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="">
+                </div>
+            </div>
+            <div class="elem black line1 right">
+                <div class="elem-part1">
+                    <h2>Pay per click advertisement</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn More</h4>
+                </div>
+                <div class="elem-part2">
+                    <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="">
+                </div>
+            </div>
+            <div class="elem black line2 left">
+                <div class="elem-part1">
+                    <h2>Social media marketing</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn More</h4>
+                </div>
+                <div class="elem-part2">
+                    <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="">
+                </div>
+            </div>
+            <div class="elem line2 right">
+                <div class="elem-part1">
+                    <h2>E-mail marketing</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn More</h4>
+                </div>
+                <div class="elem-part2">
+                    <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -144,7 +324,84 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
 
     <script>
+        const page1Animation = () => {
+            var tl = gsap.timeline()
 
+            tl.from("nav h1, nav h4, nav button", {
+                y: -30,
+                opacity: 0,
+                delay: .3,
+                duration: .6,
+                stagger: .15
+            })
+            tl.from(".center-part1 h1", {
+                x: -300,
+                opacity: 0,
+                duration: .5
+            }, "-=.3")
+            tl.from(".center-part1 p", {
+                x: -100,
+                opacity: 0,
+                duration: .4
+            })
+            tl.from(".center-part1 button", {
+                opacity: 0,
+                duration: .4
+            })
+            tl.from(".center-part2 img", {
+                opacity: 0,
+                duration: .5,
+                x: -200
+            }, "-=.7")
+            tl.from(".section1bottom img", {
+                opacity: 0,
+                y: 30,
+                stagger: .15,
+                duration: .6
+            })
+        }
+        const page2Animation = () => {
+            var tl2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".section2",
+                    scroller: "body",
+                    start: "top 50%",
+                    end: "top -45%",
+                    scrub: 2
+                }
+            })
+
+            tl2.from(".services", {
+                y: 30,
+                opacity: 0,
+                duration: .5
+            })
+            tl2.from(".elem.line1.left", {
+                x: -300,
+                opacity: 0,
+                duration: 1
+            }, "anim1")
+            tl2.from(".elem.line1.right", {
+                x: 300,
+                opacity: 0,
+                duration: 1
+            }, "anim1")
+
+
+            tl2.from(".elem.line2.left", {
+                x: -300,
+                opacity: 0,
+                duration: 1
+            }, "anim2")
+            tl2.from(".elem.line2.right", {
+                x: 300,
+                opacity: 0,
+                duration: 1
+            }, "anim2")
+        }
+
+        page1Animation()
+        page2Animation()
     </script>
 </body>
 
